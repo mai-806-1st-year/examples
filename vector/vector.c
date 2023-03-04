@@ -19,10 +19,9 @@ size_t vectorCapacity(const Vector * const vector) {
     return vector->capacity;
 }
 
-int vectorCreate(Vector * vector) {
+void vectorCreate(Vector * vector) {
     vector->data = NULL;
     vector->capacity = vector->size = 0;
-    return 0;
 }
 
 dbl *vectorData(const Vector * const vector) {

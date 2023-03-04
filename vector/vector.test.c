@@ -44,14 +44,14 @@ static void vectorBackPopBackTest(void) {
 
 static void vectorCreateDestroyTest(void) {
     Vector vector;
-    assert(vectorCreate(&vector) == 0);
+    vectorCreate(&vector);
     assert(vector.data == NULL && vector.capacity == 0 && vector.size == 0);
     vectorDestroy(&vector);
 }
 
 static void vectorPushBackTest(void) {
     Vector vector;
-    assert(vectorCreate(&vector) == 0);
+    vectorCreate(&vector);
 
     assert(vectorPushBack(&vector, 0.0) == 0);
     assert(vector.data != NULL && vector.capacity == 1 && vector.size == 1);

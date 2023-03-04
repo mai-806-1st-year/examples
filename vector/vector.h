@@ -12,7 +12,7 @@ int vectorBack(const Vector *vector, dbl *value);
 
 size_t vectorCapacity(const Vector *vector);
 
-int vectorCreate(Vector *vector);
+void vectorCreate(Vector *vector);
 
 dbl *vectorData(const Vector *vector);
 

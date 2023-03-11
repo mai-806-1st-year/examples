@@ -12,7 +12,7 @@ int main(void) {
 
     Vector vector;
     vectorCreate(&vector);
-    if (vectorResize(&vector, 10, 0.0) != 0) {
+    if (vectorResize(&vector, n, 0.0) != 0) {
         perror("vectorResize");
         exit(EXIT_FAILURE);
     }

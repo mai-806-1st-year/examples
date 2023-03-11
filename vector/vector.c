@@ -6,7 +6,7 @@
 #include "types.h"
 #include "vector.h"
 
-static int newCapacity(size_t capacity);
+static size_t newCapacity(size_t capacity);
 
 int vectorBack(const Vector * const vector, dbl * const value) {
     if (vector->size == 0)
@@ -82,7 +82,7 @@ size_t vectorSize(const Vector * const vector) {
     return vector->size;
 }
 
-static int newCapacity(const size_t capacity) {
+static size_t newCapacity(const size_t capacity) {
     if (capacity == 0)
         return 1;
     return capacity <= SIZE_MAX / 2 ? capacity * 2 : SIZE_MAX;
